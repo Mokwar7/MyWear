@@ -1,0 +1,123 @@
+.profile {
+    justify-content: start;
+    text-align-last: left;
+    margin-bottom: 100px;
+}
+
+.profile__form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.profile__header {
+    margin: 0 0 30px;
+    color: var(--Gray, #414141);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 110%;
+    width: 100%;
+}
+
+.profile__txt_email {
+    margin-top: 10px;
+}
+
+.profile__label {
+    display: flex;
+    flex-direction: column;
+    width: 258px;
+    position: relative;
+}
+
+.profile__btn {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FF5C00;
+    color: #fff;
+    border: 1px solid transparent;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: 28px;
+    left: auto;
+    right: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.profile__btn:hover {
+    background-color: #fff;
+    color: #FF5C00;
+    border: 1px solid #FF5C00;
+}
+
+.profile__btn:disabled {
+    background-color: #dcdcdc;
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.profile__email {
+    cursor: default;
+    margin: 0;
+}
+
+.profile__link {
+    width: 100%;
+    color: #2C80FF;
+    border: 1px solid #2C80FF;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.profile__link::after {
+    content: '↗';
+}
+
+.profile__link:hover {
+    color: #fff;
+    border: 1px solid #2C80FF;
+    background-color: #2C80FF;
+}
+
+.profile__link:focus {
+    color: #2C80FF;
+    background-color: transparent;
+    border: 1px solid #2C80FF;
+}
+
+.profile__exit {
+    color: #FF6363;
+    border: 1px solid #FF6363;
+    align-items: center;
+    margin: 0;
+}
+
+.profile__exit::after {
+    display: none;
+}
+
+.profile__exit:hover {
+    color: #fff;
+    border: 1px solid #FF6363;
+    background-color: #FF6363;
+}
+
+.profile__exit:focus {
+    color: #FF6363;
+    border: 1px solid #FF6363;
+}
+
+.profile__exit:hover .oleg {
+    fill: #fff;
+}

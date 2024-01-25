@@ -1,0 +1,349 @@
+.card {
+    display: flex;
+    justify-content: center;
+    width: 1340px;
+    max-width: 95%;
+    justify-content: space-between;
+    margin: 40px auto 150px;
+}
+
+.card__popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(64, 64, 64, 70%);
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.card__popup_active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup__container {
+    position: relative;
+}
+
+.popup__img {
+    position: relative;
+    object-fit: contain;
+    width: 1280px;
+    max-width: 70vw;
+    aspect-ratio: 16 / 9;
+    background-color: #f9f9f9;
+}
+
+.popup__btn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -75px;
+    right: -75px;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    font-size: 100px;
+    transform: rotate(45deg);
+    background-color: transparent;
+    outline: none;
+    border: 0;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.popup__btn:hover {
+    opacity: 0.7;
+}
+
+.card__imges {
+    display: flex;
+    flex-direction: column;
+    width: 646px;
+}
+
+.card__img-cont {
+    overflow: hidden;
+}
+
+.card__img {
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    transition: 0.3s ease-in-out;
+}
+
+.card__img:hover {
+    overflow: hidden;
+    transform: scale(1.2);
+}
+
+.card__container {
+    display: flex;
+    flex-direction: column;
+    width: 646px;
+}
+
+.card__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.card__info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__header {
+    width: 50%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    text-transform: capitalize;
+}
+
+.card__brand {
+    margin: 0;
+    color: #878787;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.card__name {
+    margin: 0;
+    color: #151515;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 110%;
+}
+
+.card__price {
+    margin: auto 0 0;
+    color: #151515;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 110%;
+}
+
+.card__sizes {
+    width: 297px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.card__choose {
+    margin: 0 0 10px;
+    color: #878787;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 130%;
+    width: 100%;
+}
+
+.card__size {
+    background-color: rgba(235, 235, 235, 0.7);
+    width: 144px;
+    height: 41px;
+    color: #878787;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 130%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.card__label:hover .card__size {
+    background-color: #FF5C00;
+    color: #fff;
+}
+
+.card__label {
+    position: relative;
+    width: 144px;
+    display: flex;
+}
+
+.card__label input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    margin: 0;
+}
+
+.card__label input:checked~.card__size {
+    background-color: #FF5C00;
+    color: #fff;
+}
+
+.card__label input:checked~.card__size::before {
+    content: '✓';
+    color: #fff;
+    margin-right: 2px;
+}
+
+.card__buy {
+    border-radius: 10px;
+    background: #FF5C00;
+    outline: none;
+    border: 1px solid transparent;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 130%;
+    padding: 18px 20px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.card__buy:hover {
+    border: 1px solid #FF5C00;
+    background: #fff;
+    color: #FF5C00;
+}
+
+.card__buy:disabled:hover {
+    background-color: #fff;
+    color: #dcdcdc;
+    border: 1px solid #dcdcdc;
+}
+
+.card__cart {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #FF5C00;
+    background: #fff;
+    color: #FF5C00;
+    position: relative;
+    cursor: default;
+}
+
+.card__cart_toggle {
+    position: absolute;
+    height: 58px;
+    width: 58px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: #FF5C00;
+    outline: none;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.card__cart_toggle:hover {
+    color: #151515;
+}
+
+.card__cart_toggle:last-of-type {
+    left: auto;
+    right: 0;
+}
+
+.card__about {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.card__description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #878787;
+    padding: 0 0 20px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+    height: 21px;
+    margin: 0 0 20px;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid #DCDCDC;
+}
+
+.card__description-btn {
+    cursor: pointer;
+    height: 36px;
+    flex-direction: column;
+    height: 100%;
+}
+
+.description__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.description__name {
+    font-weight: 400;
+    margin: 0;
+}
+
+.description__btn {
+    border: 1px solid #dcdcdc;
+    color: #dcdcdc;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+}
+
+.description__btn_active {
+    transform: rotate(45deg);
+}
+
+.card__description-btn:hover .description__btn {
+    border: 1px solid #FF5C00;
+    color: #FF5C00;
+    cursor: pointer;
+}
+
+.description__text {
+    margin: 0;
+}
+
+.description__subtext {
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    margin-top: 10px;
+    display: none;
+}
+
+.description__subtext_active {
+    display: flex;
+}
